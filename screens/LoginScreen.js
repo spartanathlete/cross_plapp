@@ -2,6 +2,32 @@ import { KeyboardAvoidingView, StyleSheet, TextInput, View, TouchableOpacity, Te
 import React, { useEffect, useState } from 'react'
 import { auth } from '../firebase'
 import { useNavigation } from '@react-navigation/native'
+import { StatusBar } from 'expo-status-bar';
+
+import {
+    StyledContainer,
+    PageLogo,
+    PageTitle,
+    SubTitle,
+    StyledInputLabel,
+    StyledFormArea,
+    StyledButton,
+    StyledTextInput,
+    LeftIcon,
+    RightIcon,
+    InnerContainer,
+    ButtonText,
+    MsgBox,
+    Line,
+    ExtraView,
+    ExtraText,
+    TextLink,
+    TextLinkContent,
+    Colors,
+  } from './../components/styles';
+
+// keyboard avoiding view
+import KeyboardAvoidingWrapper from './../components/KeyboardAvoidingWrapper';
 
 const LoginScreen = () => {
 
@@ -46,6 +72,9 @@ const LoginScreen = () => {
         style={styles.container}
         behavior="padding"
     >
+        {/* <StatusBar style="dark" /> */}
+        <PageLogo resizeMode="cover" source={require('./../assets/logo.png')} />
+        <PageTitle>Saydalyet Bouzaar</PageTitle>
         <View style={styles.inputContainer}>
             <TextInput
                 placeholder="Email"
