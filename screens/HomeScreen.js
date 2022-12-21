@@ -2,6 +2,29 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { auth } from '../firebase'
 import { useNavigation } from '@react-navigation/native'
+import { StatusBar } from 'expo-status-bar'
+import { 
+  Colors,
+  Avatar,
+  WelcomeImage,
+  PageTitle,
+  SubTitle,
+  StyledFormArea,
+  StyledButton,
+  InnerContainer,
+  WelcomeContainer,
+  ButtonText,
+  Line,
+} from './../components/styles';
+
+// keyboard avoiding view
+import KeyboardAvoidingWrapper from './../components/KeyboardAvoidingWrapper';
+
+// icon
+import { Octicons, Fontisto, Ionicons } from '@expo/vector-icons';
+
+//colors
+const { darkLight, brand, primary, secondary } = Colors;
 
 const LoginScreen = () => {
 
@@ -18,6 +41,7 @@ const LoginScreen = () => {
 
   return (
     <View style={styles.container}>
+      <StatusBar style="dark" />
       <Text>Email: {auth.currentUser.email}</Text>
       <TouchableOpacity
         onPress={handleSignOut}
@@ -38,7 +62,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   button: {
-    backgroundColor: '#0782F9',
+    backgroundColor: brand,
     width: '60%',
     padding: 15,
     borderRadius: 10,

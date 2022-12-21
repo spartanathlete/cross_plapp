@@ -10,7 +10,7 @@ export const Colors = {
   secondary: '#E5E7EB',
   tertiary: '#1F2937',
   darkLight: '#9CA3AF',
-  brand: '#6D28D9',
+  brand: '#1D5B99',
   green: '#10B981',
   red: '#EF4444',
 };
@@ -127,14 +127,6 @@ export const StyledButton = styled.TouchableOpacity`
   border-radius: 5px;
   margin-vertical: 5px;
   height: 60px;
-
-  ${(props) =>
-    props.google == true &&
-    `
-    background-color: ${green};
-    flex-direction: row;
-    justify-content: center;
-  `}
 `;
 
 export const ButtonText = styled.Text`
